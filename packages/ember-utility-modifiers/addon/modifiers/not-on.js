@@ -21,7 +21,7 @@ export default class NotOnModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this?.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor(instance) {
@@ -50,8 +50,8 @@ export default class NotOnModifier extends Modifier {
 	@action
 	_eventHandler(event) {
 		const isEventOutsideElement =
-			event.target !== this.#element &&
-			!this.#element.contains(event.target);
+			event?.target !== this.#element &&
+			!this.#element?.contains?.(event?.target);
 
 		this.#debug?.(
 			`_eventHandler:\nelement: `,
@@ -74,7 +74,7 @@ export default class NotOnModifier extends Modifier {
 	// #region Private Methods
 	_manageEventListener(element, event, eventListener, passive = false) {
 		if (this.#event && this.#eventHandler)
-			document.removeEventListener(this.#event, this?._eventHandler, {
+			document?.removeEventListener?.(this.#event, this?._eventHandler, {
 				capture: false,
 				passive: this.#passive
 			});
@@ -85,7 +85,7 @@ export default class NotOnModifier extends Modifier {
 		this.#passive = supportsPassiveEventListeners && passive;
 
 		if (this.#event && this.#eventHandler)
-			document.addEventListener(this.#event, this?._eventHandler, {
+			document?.addEventListener?.(this.#event, this?._eventHandler, {
 				capture: false,
 				passive: this.#passive
 			});
@@ -93,7 +93,7 @@ export default class NotOnModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:not-on');
+	#debug = debugLogger?.('modifier:not-on');
 
 	#element = null;
 	#event = null;

@@ -20,7 +20,7 @@ export default class OnMutationModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor(instance) {
@@ -133,7 +133,7 @@ export default class OnMutationModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:on-mutation');
+	#debug = debugLogger?.('modifier:on-mutation');
 
 	#element = null;
 	#callback = null;

@@ -18,7 +18,7 @@ export default class HasClassIfModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor() {
@@ -37,7 +37,7 @@ export default class HasClassIfModifier extends Modifier {
 					return className ? className?.trim?.() : null;
 				})
 				.filter((className) => {
-					return !!className && className.length;
+					return !!className && className?.length;
 				}) ?? [];
 
 		const falseClassList =
@@ -47,7 +47,7 @@ export default class HasClassIfModifier extends Modifier {
 					return className ? className?.trim?.() : null;
 				})
 				.filter((className) => {
-					return !!className && className.length;
+					return !!className && className?.length;
 				}) ?? [];
 
 		this.#debug?.(
@@ -81,6 +81,6 @@ export default class HasClassIfModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:has-class-if');
+	#debug = debugLogger?.('modifier:has-class-if');
 	// #endregion
 }

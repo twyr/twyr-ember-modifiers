@@ -18,7 +18,7 @@ export default class CaptureOnModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor(instance) {
@@ -55,7 +55,7 @@ export default class CaptureOnModifier extends Modifier {
 	// #region Private Methods
 	_manageEventListener(event, eventListener) {
 		if (this.#event && this.#eventHandler)
-			document.removeEventListener(
+			document?.removeEventListener?.(
 				this.#event,
 				this.#eventHandler,
 				this.#defaultOptions
@@ -65,7 +65,7 @@ export default class CaptureOnModifier extends Modifier {
 		this.#eventHandler = eventListener;
 
 		if (this.#event && this.#eventHandler)
-			document.addEventListener(
+			document?.addEventListener?.(
 				this.#event,
 				this.#eventHandler,
 				this.#defaultOptions
@@ -74,7 +74,7 @@ export default class CaptureOnModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:capture-on');
+	#debug = debugLogger?.('modifier:capture-on');
 
 	#defaultOptions = {
 		capture: true,

@@ -18,7 +18,7 @@ export default class CSSStyleModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor() {
@@ -43,16 +43,16 @@ export default class CSSStyleModifier extends Modifier {
 
 		const currentProps = Object?.keys?.(this.#cssProps);
 		currentProps?.forEach?.((currProp) => {
-			if (elemStyles[currProp]) return;
+			if (elemStyles?.[currProp]) return;
 			elemStyles[currProp] = null;
 		});
 
 		this.#cssProps = {};
 		Object?.keys?.(elemStyles)?.forEach?.((prop) => {
-			element.style[prop] = elemStyles[prop];
-			if (!elemStyles[prop]) return;
+			element.style[prop] = elemStyles?.[prop];
+			if (!elemStyles?.[prop]) return;
 
-			this.#cssProps[prop] = elemStyles[prop];
+			this.#cssProps[prop] = elemStyles?.[prop];
 		});
 	}
 	// #endregion
@@ -67,7 +67,7 @@ export default class CSSStyleModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:css-style');
+	#debug = debugLogger?.('modifier:css-style');
 	#cssProps = {};
 	// #endregion
 }

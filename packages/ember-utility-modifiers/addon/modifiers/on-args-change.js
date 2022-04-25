@@ -18,7 +18,7 @@ export default class OnArgsChangeModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor() {
@@ -54,6 +54,6 @@ export default class OnArgsChangeModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:on-args-change');
+	#debug = debugLogger?.('modifier:on-args-change');
 	// #endregion
 }

@@ -20,7 +20,7 @@ export default class OnResizeModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor(instance) {
@@ -92,7 +92,7 @@ export default class OnResizeModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:on-resize');
+	#debug = debugLogger?.('modifier:on-resize');
 
 	#element = null;
 	#callback = null;

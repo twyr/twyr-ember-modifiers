@@ -19,7 +19,7 @@ export default class RequiresIdModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor() {
@@ -51,7 +51,7 @@ export default class RequiresIdModifier extends Modifier {
 
 	// #region Private Methods
 	_setElementId(element, ignore, replace, append, prepend) {
-		const elementId = uuidv4();
+		const elementId = uuidv4?.();
 
 		const currentId = element?.getAttribute?.('id');
 		if (!currentId) {
@@ -73,6 +73,6 @@ export default class RequiresIdModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:requires-id');
+	#debug = debugLogger?.('modifier:requires-id');
 	// #endregion
 }

@@ -18,7 +18,7 @@ export default class StoreElementModifier extends Modifier {
 		super(...arguments);
 		this.#debug?.(`constructor`);
 
-		registerDestructor(this, this.destructor);
+		registerDestructor?.(this, this?.destructor);
 	}
 
 	destructor() {
@@ -50,7 +50,7 @@ export default class StoreElementModifier extends Modifier {
 	// #endregion
 
 	// #region Private Attributes
-	#debug = debugLogger('modifier:store-element');
+	#debug = debugLogger?.('modifier:store-element');
 
 	#element = null;
 	#callback = null;
