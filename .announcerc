@@ -9,12 +9,12 @@
 
 		'message': '',
 
-		'dontTag': false,
+		'noTag': false,
 		'tag': '',
 		'tagName': 'V${version}',
 		'tagMessage': 'The spaghetti recipe at the time of releasing V${version}',
 
-		'dontRelease': false,
+		'noRelease': false,
 		'releaseName': 'V${version} Release',
 		'releaseMessage': '',
 

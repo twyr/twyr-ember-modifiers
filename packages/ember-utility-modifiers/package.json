@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/twyr/twyr-utility-modifiers#readme",
 	"license": "MITNFA",
 	"readme": "README.md",
-	"version": "1.0.0",
+	"version": "0.5.1",
 	"keywords": [
 		"ember-addon",
 		"ember"
