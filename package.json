@@ -1,7 +1,7 @@
 {
 	"name": "twyr-utility-modifiers",
 	"private": true,
-	"displayName": "Twy'r Abstract Dropdown",
+	"displayName": "Twy'r Utility Modifiers",
 	"description": "Monorepo for the Ember v4.0+ implementation of modifiers helpful in developing component suite addons",
 	"homepage": "https://github.com/twyr/twyr-utility-modifiers#readme",
 	"license": "MITNFA",
@@ -60,8 +60,5 @@
 	"engines": {
 		"node": ">= 14"
 	},
-	"workspaces": [
-		"packages/ember-utility-modifiers",
-		"packages/test-app"
-	]
+	"workspaces": []
 }

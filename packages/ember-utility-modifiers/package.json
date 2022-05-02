@@ -1,7 +1,7 @@
 {
 	"name": "@twyr/ember-utility-modifiers",
 	"displayName": "Ember Utility Modifiers",
-	"description": "Ember v4.0+ implementation of utility modifiers that are generally useful",
+	"description": "Ember v4.0+ implementation of utility modifiers useful in developing component suite addons",
 	"homepage": "https://github.com/twyr/twyr-utility-modifiers#readme",
 	"license": "MITNFA",
 	"readme": "README.md",
