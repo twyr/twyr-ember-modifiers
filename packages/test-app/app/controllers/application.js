@@ -1,14 +1,14 @@
 import Controller from '@ember/controller';
 import debugLogger from 'ember-debug-logger';
 
-import { service } from '@ember/service';
-
 export default class ApplicationController extends Controller {
 	// #region Accessed Services
-	@service('router') emberRouter;
 	// #endregion
 
 	// #region Tracked Attributes
+	// #endregion
+
+	// #region Untracked Public Fields
 	// #endregion
 
 	// #region Constructor
@@ -19,19 +19,9 @@ export default class ApplicationController extends Controller {
 	// #endregion
 
 	// #region Lifecycle Hooks
-	willDestroy() {
-		this.#debug?.(`willDestroy`);
-		super.willDestroy(...arguments);
-	}
 	// #endregion
 
-	// #region DOM Event Handlers - Drawer / Sidebar
-	// #endregion
-
-	// #region DOM Event Handlers - Drawer / Sidebar List Items
-	// #endregion
-
-	// #region DOM Event Handlers - Alert / Snackbar
+	// #region DOM Event Handlers
 	// #endregion
 
 	// #region Computed Properties

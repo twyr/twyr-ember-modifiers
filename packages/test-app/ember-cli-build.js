@@ -1,19 +1,11 @@
 'use strict';
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
 module.exports = function (defaults) {
-	let app = new EmberApp(defaults, {
+	const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+	const app = new EmberApp(defaults, {
 		// Add options here
-		storeConfigInMeta: false,
-
-		autoImport: {
-			watchDependencies: '@twyr/ember-utility-modifiers'
-		},
-
-		babel: {
-			plugins: [require.resolve('ember-auto-import/babel-plugin')]
-		}
+		name: require('./package').name,
+		storeConfigInMeta: false
 	});
 
 	// Use `app.import` to add additional libraries to the generated

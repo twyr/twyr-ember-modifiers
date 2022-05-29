@@ -1,17 +1,17 @@
 <h1 align="center">
-    Twy'r Abstract Dropdown
+    Twyr Observer Modifiers
 </h1>
 <div align="center">
     <a href="https://spdx.org/licenses/MITNFA.html"><img src="https://img.shields.io/badge/License-MIT%20%2Bno--false--attribs-blue" /></a>
-    <a href="https://github.com/twyr/twyr-utility-modifiers/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" /></a>
+    <a href="https://github.com/twyr/twyr-ember-modifiers/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" /></a>
 </div>
 <hr />
 
 <div align="center">
-    <a href="https://emberjs.com">Ember 4.0+</a> implementation of a resuable dropdown component
+    <a href="https://emberjs.com">Ember 4.0+</a> and <a href="">Embroider</a> template repository
 </div>
 <div align="center">
-    Built as part of the <a href="https://github.com/twyr">Twy&apos;r</a> effort by <a href="https://github.com/shadyvd">Vish Desai</a> and <a href="https://github.com/twyr/twyr-utility-modifiers/graphs/contributors">contributors</a>
+    Built as part of the <a href="https://github.com/twyr">Twy&apos;r</a> effort by <a href="https://github.com/shadyvd">Vish Desai</a> and <a href="https://github.com/twyr/twyr-ember-modifiers/graphs/contributors">contributors</a>
 </div>
 <hr />
 
@@ -21,7 +21,6 @@
 -   [Status](#status)
 -   [Why](#why)
 -   [Goals](#goals)
--   [Goals](#goals)
 -   [Contributing](#contributing)
     -   [Code of Conduct](#code-of-conduct)
     -   [Developing](#developing)
@@ -30,26 +29,42 @@
 
 #### ABOUT
 
-This is a monorepo used for the development and maintenance of the [Ember](https://emberjs.com) implementation of modifiers helpful in developing component suite addons, and consists of
-two packages - the Ember Utility Modifiers Addon itself, and an Ember App for testing, debugging, documenting, and showcasing the addon.
+This is a monorepo used as a template for creating [Ember](https://emberjs.com) addons using [Embroider](https://github.com/embroider-build/embroider) in the V2 format.
+It consists of two packages - the Basic Addon itself, and an Ember App for testing, debugging, documenting, and showcasing the addon.
 
 #### STATUS
 
-| Category       | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conventions    | [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg)](https://conventionalcommits.org) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)                                                                                                                                                                                  |
-| Code Stats     | [![Languages](https://badgen.net/lgtm/langs/g/twyr/twyr-utility-modifiers)](https://lgtm.com/projects/g/twyr/twyr-utility-modifiers) ![GitHub repo size](https://img.shields.io/github/repo-size/twyr/twyr-utility-modifiers) [![LoC](https://badgen.net/lgtm/lines/g/twyr/twyr-utility-modifiers)](https://lgtm.com/projects/g/twyr/twyr-utility-modifiers) [![Language grade](https://badgen.net/lgtm/grade/g/twyr/twyr-utility-modifiers)](https://lgtm.com/projects/g/twyr/twyr-utility-modifiers/context:javascript) [![Coverage Status](https://coveralls.io/repos/github/twyr/twyr-utility-modifiers/badge.svg?branch=main)](https://coveralls.io/github/twyr/twyr-utility-modifiers?branch=main) |
-| Security       | [![Known Vulnerabilities](https://snyk.io/test/github/twyr/twyr-utility-modifiers/badge.svg?targetFile=package.json)](https://snyk.io/test/github/twyr/twyr-utility-modifiers?targetFile=package.json) [![Total alerts](https://img.shields.io/lgtm/alerts/g/twyr/twyr-utility-modifiers.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/twyr/twyr-utility-modifiers/alerts/) ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@twyr/twyr-utility-modifiers)                                                                                                                                                             |
-|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Development    | ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/twyr/twyr-utility-modifiers) ![GitHub last commit](https://img.shields.io/github/last-commit/twyr/twyr-utility-modifiers)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Issues & PRs   | ![GitHub open issues](https://img.shields.io/github/issues-raw/twyr/twyr-utility-modifiers) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/twyr/twyr-utility-modifiers) ![GitHub open prs](https://img.shields.io/github/issues-pr-raw/twyr/twyr-utility-modifiers) ![GitHub closed prs](https://img.shields.io/github/issues-pr-closed-raw/twyr/twyr-utility-modifiers)                                                                                                                                                                                                                                                                                                        |
-|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Release Status | ![GitHub package.json version](https://img.shields.io/github/package-json/v/twyr/twyr-utility-modifiers/main) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/twyr/twyr-utility-modifiers?sort=semver) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/twyr/twyr-utility-modifiers?sort=semver)                                                                                                                                                                                                                                                                                                                                                              |
-| Publish Status | ![node-current](https://img.shields.io/node/v/@twyr/twyr-utility-modifiers) ![npm bundle size](https://img.shields.io/bundlephobia/min/@twyr/twyr-utility-modifiers) ![npm](https://img.shields.io/npm/dy/@twyr/twyr-utility-modifiers)                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Category       | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conventions    | [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg)](https://conventionalcommits.org) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)                                                                                                                                                 |
+| Code Stats     | [![Languages](https://badgen.net/lgtm/langs/g/twyr/twyr-ember-modifiers)](https://lgtm.com/projects/g/twyr/twyr-ember-modifiers) ![GitHub repo size](https://img.shields.io/github/repo-size/twyr/twyr-ember-modifiers) [![LoC](https://badgen.net/lgtm/lines/g/twyr/twyr-ember-modifiers)](https://lgtm.com/projects/g/twyr/twyr-ember-modifiers) [![Language grade](https://badgen.net/lgtm/grade/g/twyr/twyr-ember-modifiers)](https://lgtm.com/projects/g/twyr/twyr-ember-modifiers/context:javascript) [![Coverage Status](https://coveralls.io/repos/github/twyr/twyr-ember-modifiers/badge.svg?branch=main)](https://coveralls.io/github/twyr/twyr-ember-modifiers?branch=main) |
+| Security       | [![Known Vulnerabilities](https://snyk.io/test/github/twyr/twyr-ember-modifiers/badge.svg?targetFile=package.json)](https://snyk.io/test/github/twyr/twyr-ember-modifiers?targetFile=package.json) [![Total alerts](https://img.shields.io/lgtm/alerts/g/twyr/twyr-ember-modifiers.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/twyr/twyr-ember-modifiers/alerts/) ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@twyr/ember-observer-modifiers)                                                                                                                                                 |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Development    | ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/twyr/twyr-ember-modifiers) ![GitHub last commit](https://img.shields.io/github/last-commit/twyr/twyr-ember-modifiers)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Issues & PRs   | ![GitHub open issues](https://img.shields.io/github/issues-raw/twyr/twyr-ember-modifiers) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/twyr/twyr-ember-modifiers) ![GitHub open prs](https://img.shields.io/github/issues-pr-raw/twyr/twyr-ember-modifiers) ![GitHub closed prs](https://img.shields.io/github/issues-pr-closed-raw/twyr/twyr-ember-modifiers)                                                                                                                                                                                                                                                                                              |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Release Status | ![GitHub package.json version](https://img.shields.io/github/package-json/v/twyr/twyr-ember-modifiers/main) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/twyr/twyr-ember-modifiers?sort=semver) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/twyr/twyr-ember-modifiers?sort=semver)                                                                                                                                                                                                                                                                                                                                                  |
+| Publish Status | ![node-current](https://img.shields.io/node/v/@twyr/ember-observer-modifiers) ![npm bundle size](https://badgen.net/bundlephobia/min/@twyr/ember-observer-modifiers) ![npm](https://img.shields.io/npm/dy/@twyr/ember-observer-modifiers)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 #### WHY
 
-Just because...
+The Embroider build system gets default configurations for addons from _two_ different places:
+
+1. The _options_ from the "main" / "build" file specified in the addon's [Ember Package Metadata](https://github.com/embroider-build/embroider/blob/main/SPEC.md#definitions)
+1. The _config()_ function from the same "main" / "build" file
+
+At App build time,these addon configurations are processed as:
+
+1. The _options_ object - merged with the _@embroider/macros_ key specified in the "ember-cli-build.js" file of the app
+1. The _config()_ return value - merged with the _config/environment.js_ file of the app
+
+The merged configs are accessible / usable in diffferent places:
+
+1. The merged _options_ object is available in the @embroider/macros artifacts - getConfig, getOwnConfig, etc.
+1. The merged _config()_ return value is available in the "contentFor" hooks
+
+This monorepo provides an _extremely trivial_ implementation of an addon / test-app pair that reads / uses a common configuration file
+called [dual-build-config.js](./packages/test-app/config/dual-build-config.js).
 
 #### GOALS
 
@@ -57,6 +72,17 @@ Ember-related goals:
 
 1. Build for [Ember 4.0+](https://emberjs.com) - with no expectation of backward compatibility
 1. Build using [Embroider](https://github.com/embroider-build/embroider) - aim for "Native Support"
+
+Addon goals::Showcase how to effectively integrate with / consume the Embroider build system artifacts:
+
+1. Use the [contentFor](https://github.com/embroider-build/embroider/blob/main/SPEC.md#contentfor) hooks to conditionally inject HTML at build time - based on config defined in [{{app}}/config/environment.js](./packages/test-app/config/environment.js)
+1. Use the [@embroider/macros](https://github.com/embroider-build/embroider/tree/main/packages/macros#readme) capabilities to conditionally include/exclude artifacts - based on config defined in [{{app}}/ember-cli-build.js](./packages/test-app/ember-cli-build.js)
+
+Developer Experience Goals::Provide a monorepo to be used as a template / jump-off point:
+
+1. Should be trivial to clone / install / build / run and see how the classical / embroider build systems interact
+1. Should be trivial to remove the artifacts exported by the example addon and add new ones
+1. Should be trivial to use the new artifacts in the example app
 
 #### CONTRIBUTING
 

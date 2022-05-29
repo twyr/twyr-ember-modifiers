@@ -21,7 +21,7 @@
 		'outputFormat': 'all',
 		'outputPath': 'dist/release-notes',
 
-		'upstream': 'origin'
+		'upstream': 'twyr'
 	},
 
 	'publish': {
@@ -33,6 +33,6 @@
 		'npmToken': null,
 
 		'releaseName': 'V${version} Release',
-		'upstream': 'twyr-github'
+		'upstream': 'twyr'
 	}
 }

@@ -7,22 +7,20 @@
     -   [Git Configuration](#setting-up-git-config-locally)
     -   [Generating the GPG key](#generating-the-gpg-key)
 -   [Building and Testing](#building-and-testing)
--   [Extending the Code](#extending-the-code)
 
 #### GETTING THE CODE
 
 ```
-git clone https://github.com/twyr/twyr-utility-modifiers
-cd twyr-utility-modifiers
+git clone https://github.com/twyr/twyr-ember-modifiers
+cd twyr-ember-modifiers
 npm i
-lerna bootstrap
 ```
 
 #### SETTING UP THE ENVIRONMENT
 
 ##### Generating the GPG Key
 
-[Ember Abstract Dropdown](https://github.com/twyr/twyr-utility-modifiers) requires that every commit be signed before it is accepted for merging into the main branch prior to release.
+[Twyr Observer Modifiers](https://github.com/twyr/twyr-ember-modifiers) requires that every commit be signed before it is accepted for merging into the main branch prior to release.
 
 All contributors are expected to create a GPG Key and use it to sign all their commits during the development process.
 At the very minimum, all _Pull Requests_ are expected to be signed by the contributors' GPG Key prior to being accepted.
@@ -46,14 +44,11 @@ git config user.signingKey "GPG Key Id"
 
 #### BUILDING AND TESTING
 
-| Operation           | NPM Script / Command |
-| ------------------- | -------------------- |
-| Building Everything | lerna run build      |
-| Linting             | lerna run lint       |
-| Linting with fixes  | lerna run lint:fix   |
-| Running the Tests   | lerna run test       |
-|                     |                      |
-
-#### EXTENDING THE CODE
-
--   [ ] TODO: Add developer guide
+| Operation                 | NPM Script / Command             |
+| ------------------------- | -------------------------------- |
+| Building Everything       | npm run build --workspaces       |
+| Clean Building Everything | npm run build:clean --workspaces |
+| Linting                   | npm run lint --workspaces        |
+| Linting with fixes        | npm run lint:fix --workspaces    |
+| Running the Tests         | npm run test --workspaces        |
+|                           |                                  |

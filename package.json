@@ -1,12 +1,12 @@
 {
-	"name": "twyr-utility-modifiers",
+	"name": "@twyr/twyr-ember-modifiers",
 	"private": true,
-	"displayName": "Twy'r Utility Modifiers",
-	"description": "Monorepo for the Ember v4.0+ implementation of modifiers helpful in developing component suite addons",
-	"homepage": "https://github.com/twyr/twyr-utility-modifiers#readme",
+	"displayName": "Twyr Observer Modifiers",
+	"description": "Monorepo for Ember modifiers used in Twy'r frontend projects",
+	"homepage": "https://github.com/twyr/twyr-ember-modifiers#readme",
 	"license": "MITNFA",
 	"readme": "README.md",
-	"version": "0.6.0",
+	"version": "1.0.4",
 	"author": {
 		"name": "Vish Desai",
 		"email": "shadyvd@hotmail.com",
@@ -28,17 +28,18 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/twyr/twyr-utility-modifiers.git"
+		"url": "git+https://github.com/twyr/twyr-ember-modifiers.git"
 	},
 	"bugs": {
-		"url": "https://github.com/twyr/twyr-utility-modifiers/issues"
+		"url": "https://github.com/twyr/twyr-ember-modifiers/issues"
 	},
+	"dependencies": {},
 	"devDependencies": {
-		"@commitlint/cli": "16.2.4",
-		"@commitlint/config-conventional": "16.2.4",
+		"@commitlint/cli": "17.0.1",
+		"@commitlint/config-conventional": "17.0.0",
 		"commitizen": "4.2.4",
 		"cz-customizable": "6.3.0",
-		"eslint": "8.14.0",
+		"eslint": "8.16.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-editorconfig": "3.2.0",
 		"eslint-plugin-json": "3.1.0",
@@ -46,19 +47,19 @@
 		"eslint-plugin-prettier": "4.0.0",
 		"eslint-plugin-security": "1.5.0",
 		"eslint-plugin-security-node": "1.1.1",
-		"git-cz": "4.8.0",
 		"git-split-diffs": "0.10.0",
-		"husky": "7.0.4",
+		"husky": "8.0.1",
 		"is-ci": "3.0.1",
-		"lerna": "4.0.0",
-		"lint-staged": "12.4.1"
+		"lint-staged": "12.4.2"
 	},
 	"scripts": {
-		"lint-staged": "npx --no-install lint-staged --allow-empty",
-		"prepare": "is-ci || npx --no-install husky install"
+		"lint-staged": "npx lint-staged --allow-empty",
+		"prepare": "is-ci || npx husky install"
 	},
 	"engines": {
 		"node": ">= 14"
 	},
-	"workspaces": []
+	"workspaces": [
+		"packages/*"
+	]
 }

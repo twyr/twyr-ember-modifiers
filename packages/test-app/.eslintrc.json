@@ -4,7 +4,7 @@
 	"parserOptions": {
 		"ecmaVersion": 2021,
 		"sourceType": "module",
-		"requireConfigFile": false,
+		"requireConfigFile": true,
 		"ecmaFeatures": {
 			"legacyDecorators": true
 		}
@@ -12,8 +12,8 @@
 	"plugins": ["ember", "json", "prettier"],
 	"extends": [
 		"eslint:recommended",
-		"plugin:json/recommended",
 		"plugin:ember/recommended",
+		"plugin:json/recommended",
 		"plugin:prettier/recommended"
 	],
 	"env": {
@@ -24,13 +24,13 @@
 	"overrides": [
 		{
 			"files": [
-				".dependency-cruiser.js",
-				".template-lintrc.js",
-				"ember-cli-build.js",
-				"postcss.config.js",
-				"tailwind.config.js",
-				"testem.js",
-				"config/**"
+				"./.template-lintrc.js",
+				"./ember-cli-build.js",
+				"./postcss.config.js",
+				"./tailwind.config.js",
+				"./testem.js",
+				"./blueprints/*/index.js",
+				"./config/**/*.js"
 			],
 			"excludedFiles": ["app/**"],
 			"parserOptions": {
@@ -44,8 +44,13 @@
 			"plugins": ["json", "node"],
 			"extends": ["plugin:json/recommended", "plugin:node/recommended"],
 			"rules": {
+				"node/no-extraneous-require": "off",
 				"node/no-unpublished-require": "off"
 			}
+		},
+		{
+			"files": ["tests/**/*-test.{js,ts}"],
+			"extends": ["plugin:qunit/recommended"]
 		}
 	]
 }
