@@ -1,14 +1,17 @@
 <h1 align="center">
-    Twyr Observer Modifiers
+    Twy&apos;r Ember Modifiers
 </h1>
 <div align="center">
     <a href="https://spdx.org/licenses/MITNFA.html"><img src="https://img.shields.io/badge/License-MIT%20%2Bno--false--attribs-blue" /></a>
-    <a href="https://github.com/twyr/twyr-ember-modifiers/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" /></a>
+    <a href="https://github.com/twyr/twyr-ember-modifiers/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg" /></a>
 </div>
 <hr />
 
 <div align="center">
-    <a href="https://emberjs.com">Ember 4.0+</a> and <a href="">Embroider</a> template repository
+    Monorepo containing <a href="https://emberjs.com">Ember 4.0+</a> Modifiers used in Twy&apos;r frontend projects
+</div>
+<div align="center">
+	Built on the <a href="">Embroider</a> build system
 </div>
 <div align="center">
     Built as part of the <a href="https://github.com/twyr">Twy&apos;r</a> effort by <a href="https://github.com/shadyvd">Vish Desai</a> and <a href="https://github.com/twyr/twyr-ember-modifiers/graphs/contributors">contributors</a>
@@ -19,8 +22,7 @@
 
 -   [About](#about)
 -   [Status](#status)
--   [Why](#why)
--   [Goals](#goals)
+-   [Addons](#addons)
 -   [Contributing](#contributing)
     -   [Code of Conduct](#code-of-conduct)
     -   [Developing](#developing)
@@ -29,8 +31,8 @@
 
 #### ABOUT
 
-This is a monorepo used as a template for creating [Ember](https://emberjs.com) addons using [Embroider](https://github.com/embroider-build/embroider) in the V2 format.
-It consists of two packages - the Basic Addon itself, and an Ember App for testing, debugging, documenting, and showcasing the addon.
+This is a monorepo containing [Ember](https://emberjs.com) addons implementing modifiers used in Twy&apos;r frontend projects, built using [Embroider](https://github.com/embroider-build/embroider) in the V2 format.
+Please see the README of the individual Addons for details about the modifiers, and associated documentation
 
 #### STATUS
 
@@ -44,45 +46,15 @@ It consists of two packages - the Basic Addon itself, and an Ember App for testi
 | Issues & PRs   | ![GitHub open issues](https://img.shields.io/github/issues-raw/twyr/twyr-ember-modifiers) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/twyr/twyr-ember-modifiers) ![GitHub open prs](https://img.shields.io/github/issues-pr-raw/twyr/twyr-ember-modifiers) ![GitHub closed prs](https://img.shields.io/github/issues-pr-closed-raw/twyr/twyr-ember-modifiers)                                                                                                                                                                                                                                                                                              |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Release Status | ![GitHub package.json version](https://img.shields.io/github/package-json/v/twyr/twyr-ember-modifiers/main) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/twyr/twyr-ember-modifiers?sort=semver) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/twyr/twyr-ember-modifiers?sort=semver)                                                                                                                                                                                                                                                                                                                                                  |
-| Publish Status | ![node-current](https://img.shields.io/node/v/@twyr/ember-observer-modifiers) ![npm bundle size](https://badgen.net/bundlephobia/min/@twyr/ember-observer-modifiers) ![npm](https://img.shields.io/npm/dy/@twyr/ember-observer-modifiers)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-#### WHY
+#### ADDONS
 
-The Embroider build system gets default configurations for addons from _two_ different places:
+This monorepo consists of 4 addons:
 
-1. The _options_ from the "main" / "build" file specified in the addon's [Ember Package Metadata](https://github.com/embroider-build/embroider/blob/main/SPEC.md#definitions)
-1. The _config()_ function from the same "main" / "build" file
-
-At App build time,these addon configurations are processed as:
-
-1. The _options_ object - merged with the _@embroider/macros_ key specified in the "ember-cli-build.js" file of the app
-1. The _config()_ return value - merged with the _config/environment.js_ file of the app
-
-The merged configs are accessible / usable in diffferent places:
-
-1. The merged _options_ object is available in the @embroider/macros artifacts - getConfig, getOwnConfig, etc.
-1. The merged _config()_ return value is available in the "contentFor" hooks
-
-This monorepo provides an _extremely trivial_ implementation of an addon / test-app pair that reads / uses a common configuration file
-called [dual-build-config.js](./packages/test-app/config/dual-build-config.js).
-
-#### GOALS
-
-Ember-related goals:
-
-1. Build for [Ember 4.0+](https://emberjs.com) - with no expectation of backward compatibility
-1. Build using [Embroider](https://github.com/embroider-build/embroider) - aim for "Native Support"
-
-Addon goals::Showcase how to effectively integrate with / consume the Embroider build system artifacts:
-
-1. Use the [contentFor](https://github.com/embroider-build/embroider/blob/main/SPEC.md#contentfor) hooks to conditionally inject HTML at build time - based on config defined in [{{app}}/config/environment.js](./packages/test-app/config/environment.js)
-1. Use the [@embroider/macros](https://github.com/embroider-build/embroider/tree/main/packages/macros#readme) capabilities to conditionally include/exclude artifacts - based on config defined in [{{app}}/ember-cli-build.js](./packages/test-app/ember-cli-build.js)
-
-Developer Experience Goals::Provide a monorepo to be used as a template / jump-off point:
-
-1. Should be trivial to clone / install / build / run and see how the classical / embroider build systems interact
-1. Should be trivial to remove the artifacts exported by the example addon and add new ones
-1. Should be trivial to use the new artifacts in the example app
+-   [Component Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-component-modifiers): Utilities for accessing the component element, setting its ID attribute, and watching for argument changes
+-   [CSS Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-css-modifiers): Utilities for setting CSS styles, managing class lists, and watching for computed style changes
+-   [Event Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-event-modifiers): Utilities for capturing HTML DOM Events in the capture phase
+-   [Observer Modifiers](<(https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-observer-modifiers)>): Utilities for reacting to DOM mutations, and element resizing
 
 #### CONTRIBUTING
 
