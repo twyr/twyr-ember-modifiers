@@ -1,7 +1,7 @@
 {
 	"name": "@twyr/twyr-ember-modifiers",
 	"private": true,
-	"displayName": "Twyr Observer Modifiers",
+	"displayName": "Twy'r Observer Modifiers",
 	"description": "Monorepo for Ember modifiers used in Twy'r frontend projects",
 	"homepage": "https://github.com/twyr/twyr-ember-modifiers#readme",
 	"license": "MITNFA",
