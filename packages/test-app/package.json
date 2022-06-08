@@ -63,6 +63,7 @@
 		"@twyr/ember-event-modifiers": "1.0.5",
 		"@twyr/ember-observer-modifiers": "1.0.5",
 		"broccoli-asset-rev": "3.0.0",
+		"daisyui": "2.15.2",
 		"ember-auto-import": "2.4.2",
 		"ember-cli": "4.4.0",
 		"ember-cli-app-version": "5.0.0",

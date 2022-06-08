@@ -966,8 +966,6 @@ module.exports = {
 		'active',
 		'disabled'
 	],
-	corePlugins: {
-		preflight: false
-	},
-	plugins: [require('@tailwindcss/typography')]
+	corePlugins: {},
+	plugins: [require('@tailwindcss/typography'), require('daisyui')]
 };
