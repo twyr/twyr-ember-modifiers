@@ -1,8 +1,8 @@
 {
-	"name": "@twyr/ember-observer-modifiers",
-	"displayName": "Ember Observer Modifiers",
-	"description": "Ember modifiers wrapping Browser Observers (Mutation, Resize, etc.)",
-	"homepage": "https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-observer-modifiers",
+	"name": "@twyr/ember-css-modifiers",
+	"displayName": "Ember CSS Modifiers",
+	"description": "Ember modifiers for adding styles, managing classes, and reacting to computed style changes",
+	"homepage": "https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-css-modifiers",
 	"license": "MITNFA",
 	"readme": "README.md",
 	"version": "1.0.5",
@@ -107,10 +107,10 @@
 		"main": "addon-main.js",
 		"build": "addon-main.js",
 		"app-js": {
-			"./modifiers/on-mutation.js": "./dist/_app_/modifiers/on-mutation.js",
-			"./modifiers/on-resize.js": "./dist/_app_/modifiers/on-resize.js",
-			"./services/element-mutation-watcher.js": "./dist/_app_/services/element-mutation-watcher.js",
-			"./services/element-resize-watcher.js": "./dist/_app_/services/element-resize-watcher.js"
+			"./modifiers/css-style.js": "./dist/_app_/modifiers/css-style.js",
+			"./modifiers/has-class-if.js": "./dist/_app_/modifiers/has-class-if.js",
+			"./modifiers/on-style-change.js": "./dist/_app_/modifiers/on-style-change.js",
+			"./services/element-computed-style-watcher.js": "./dist/_app_/services/element-computed-style-watcher.js"
 		}
 	}
 }

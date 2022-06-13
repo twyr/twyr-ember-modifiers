@@ -1,8 +1,8 @@
 {
-	"name": "@twyr/ember-event-modifiers",
-	"displayName": "Ember Event Modifiers",
-	"description": "Ember modifiers for detecting events not on the element, and in the capture phase",
-	"homepage": "https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-event-modifiers",
+	"name": "@twyr/ember-component-modifiers",
+	"displayName": "Ember Component Modifiers",
+	"description": "Ember utility modifiers for Glimmer components",
+	"homepage": "https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-component-modifiers",
 	"license": "MITNFA",
 	"readme": "README.md",
 	"version": "1.0.5",
@@ -56,7 +56,8 @@
 		"@glimmer/tracking": "1.1.2",
 		"ember-cli-htmlbars": "6.0.1",
 		"ember-debug-logger": "2.1.1",
-		"ember-modifier": "3.2.7"
+		"ember-modifier": "3.2.7",
+		"uuid": "8.3.2"
 	},
 	"devDependencies": {
 		"@babel/core": "7.18.2",
@@ -107,9 +108,9 @@
 		"main": "addon-main.js",
 		"build": "addon-main.js",
 		"app-js": {
-			"./modifiers/capture-on.js": "./dist/_app_/modifiers/capture-on.js",
-			"./modifiers/not-on.js": "./dist/_app_/modifiers/not-on.js",
-			"./utils/check-browser-features.js": "./dist/_app_/utils/check-browser-features.js"
+			"./modifiers/on-args-change.js": "./dist/_app_/modifiers/on-args-change.js",
+			"./modifiers/requires-id.js": "./dist/_app_/modifiers/requires-id.js",
+			"./modifiers/store-element.js": "./dist/_app_/modifiers/store-element.js"
 		}
 	}
 }

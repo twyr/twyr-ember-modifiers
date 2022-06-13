@@ -51,10 +51,10 @@ Please see the README of the individual Addons for details about the modifiers, 
 
 This monorepo consists of 4 addons:
 
--   [Component Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-component-modifiers): Utilities for accessing the component element, setting its ID attribute, and watching for argument changes
--   [CSS Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-css-modifiers): Utilities for setting CSS styles, managing class lists, and watching for computed style changes
--   [Event Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-event-modifiers): Utilities for capturing HTML DOM Events in the capture phase
--   [Observer Modifiers](<(https://github.com/twyr/twyr-ember-modifiers/tree/main/packages/ember-observer-modifiers)>): Utilities for reacting to DOM mutations, and element resizing
+-   [Component Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-component-modifiers): Utilities for accessing the component element, setting its ID attribute, and watching for argument changes
+-   [CSS Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-css-modifiers): Utilities for setting CSS styles, managing class lists, and watching for computed style changes
+-   [Event Modifiers](https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-event-modifiers): Utilities for capturing HTML DOM Events in the capture phase
+-   [Observer Modifiers](<(https://github.com/twyr/twyr-ember-modifiers/tree/main/addons/ember-observer-modifiers)>): Utilities for reacting to DOM mutations, and element resizing
 
 #### CONTRIBUTING
 
